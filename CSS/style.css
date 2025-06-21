@@ -1,6 +1,3 @@
-/* ========================================
-   VARIABLES CSS
-   ======================================== */
 :root {
     --primary-color: #606c38;
     --secondary-color: #283618;
@@ -13,74 +10,30 @@
     --accent-gradient: linear-gradient(135deg, #dda15e 0%, #bc6c25 100%);
     --shadow: 0 10px 25px -5px rgba(40, 54, 24, 0.15);
     --border-radius: 20px;
-    
-    /* Nouvelles variables pour éviter les répétitions */
-    --transition-default: all 0.3s ease;
-    --padding-section: 5rem 0;
-    --padding-section-mobile: 3rem 0;
-    --navbar-height: 80px;
 }
 
-/* ========================================
-   RESET & BASE
-   ======================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html { 
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px;
-}
-
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--dark-color);
+    /* background: linear-gradient(135deg, #fefae0 0%, #f5f3e7 100%); */
     overflow-x: hidden;
-    padding-top: var(--navbar-height);
 }
 
-/* ========================================
-   COMPOSANTS RÉUTILISABLES
-   ======================================== */
-.glass-effect {
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(96, 108, 56, 0.1);
-}
-
-.hover-lift {
-    transition: var(--transition-default);
-}
-
-.hover-lift:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(40, 54, 24, 0.2);
-}
-
-.gradient-text {
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.fade-animation {
-    animation: fadeInUp 1s ease-out;
-}
-
-/* ========================================
-   NAVIGATION
-   ======================================== */
+/* Navigation moderne */
 .navbar {
     background: rgba(254, 250, 224, 0.95) !important;
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(96, 108, 56, 0.2);
     padding: 1rem 0;
-    transition: var(--transition-default);
+    transition: all 0.3s ease;
     box-shadow: var(--shadow);
-    backdrop-filter: blur(10px);
 }
 
 .navbar-brand {
@@ -98,7 +51,7 @@ body {
     margin: 0 0.5rem;
     border-radius: 25px;
     padding: 0.5rem 1rem !important;
-    transition: var(--transition-default);
+    transition: all 0.3s ease;
     position: relative;
 }
 
@@ -108,9 +61,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* ========================================
-   HERO SECTION
-   ======================================== */
+/* Hero Section */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -119,6 +70,33 @@ body {
     color: var(--background-light);
     position: relative;
     overflow: hidden;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out 0.2s both;
+    display: inline-block;
+    
+    background: linear-gradient(135deg, #ce8531 0%, #4e2909 100%);
+    color: var(--background-light);
+    padding: 12px 25px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(188, 108, 37, 0.3);
+    transition: all 0.3s ease;
+}
+
+.hero-subtitle:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(188, 108, 37, 0.4);
+}
+
+#photo-profil {
+    width: auto;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 25px;
 }
 
 .hero::before {
@@ -145,22 +123,11 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 300;
     margin-bottom: 2rem;
+    opacity: 0.9;
     animation: fadeInUp 1s ease-out 0.2s both;
-    display: inline-block;
-    background: linear-gradient(135deg, #ce8531 0%, #4e2909 100%);
-    color: var(--background-light);
-    padding: 12px 25px;
-    border-radius: 50px;
-    box-shadow: 0 5px 15px rgba(188, 108, 37, 0.3);
-    transition: var(--transition-default);
-}
-
-.hero-subtitle:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 20px rgba(188, 108, 37, 0.4);
 }
 
 .hero-description {
@@ -171,9 +138,6 @@ body {
     animation: fadeInUp 1s ease-out 0.4s both;
 }
 
-/* ========================================
-   IMAGES
-   ======================================== */
 .profile-image {
     width: 300px;
     height: 300px;
@@ -189,16 +153,6 @@ body {
     transform: scale(1.05);
 }
 
-#photo-profil {
-    width: auto;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 25px;
-}
-
-/* ========================================
-   BOUTONS
-   ======================================== */
 .cta-buttons {
     animation: fadeInUp 1s ease-out 0.8s both;
 }
@@ -213,7 +167,7 @@ body {
     text-decoration: none;
     display: inline-block;
     margin: 0.5rem;
-    transition: var(--transition-default);
+    transition: all 0.3s ease;
     backdrop-filter: blur(10px);
 }
 
@@ -224,11 +178,9 @@ body {
     box-shadow: 0 10px 20px rgba(40, 54, 24, 0.3);
 }
 
-/* ========================================
-   SECTIONS & CARTES
-   ======================================== */
+/* Sections modernes */
 .section {
-    padding: var(--padding-section);
+    padding: 5rem 0;
     position: relative;
 }
 
@@ -243,45 +195,32 @@ body {
     background-clip: text;
 }
 
-.card-modern,
-.project-card {
+.card-modern {
     background: var(--background-light);
     border-radius: var(--border-radius);
     padding: 2rem;
     box-shadow: var(--shadow);
     border: 1px solid rgba(96, 108, 56, 0.1);
-    transition: var(--transition-default);
+    transition: all 0.3s ease;
     height: 100%;
 }
 
-.project-card {
-    background: rgba(254, 250, 224, 0.8);
-    backdrop-filter: blur(10px);
-    margin-bottom: 2rem;
-}
-
-.card-modern:hover,
-.project-card:hover {
+.card-modern:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(40, 54, 24, 0.2);
     border-color: var(--light-accent);
 }
 
-.project-card:hover {
-    background: rgba(254, 250, 224, 0.9);
-    transform: translateY(-5px);
+/* Skills avec animations */
+.skill-item {
+    background: var(--background-light);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 0.5rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--accent-color);
 }
-
-.project-title {
-    color: var(--primary-color);
-    font-weight: 600;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-}
-
-/* ========================================
-   SKILLS
-   ======================================== */
 #skills .row {
     display: flex;
     flex-wrap: wrap;
@@ -297,11 +236,12 @@ body {
     border-radius: 15px;
     padding: 1.5rem;
     box-shadow: var(--shadow);
-    transition: var(--transition-default);
+    transition: all 0.3s ease;
     border-left: 4px solid var(--accent-color);
     display: flex;
     flex-direction: column;
     width: 100%;
+    /* Hauteur minimale pour uniformiser */
     min-height: 200px;
 }
 
@@ -318,16 +258,52 @@ body {
     font-size: 1.2rem;
 }
 
+/* Pour que le contenu se répartisse bien dans la hauteur */
 .skill-item ul {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
+.skill-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 15px 30px rgba(40, 54, 24, 0.2);
+    border-left-color: var(--light-accent);
+}
 
-/* ========================================
-   BADGES
-   ======================================== */
+.skill-category {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Projets avec effet glassmorphism */
+.project-card {
+    background: rgba(254, 250, 224, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(96, 108, 56, 0.18);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    background: rgba(254, 250, 224, 0.9);
+    transform: translateY(-5px);
+    border-color: var(--light-accent);
+}
+
+.project-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Style personnalisé pour les badges */
 .custom-badge {
     display: inline-block;
     padding: 0.35em 0.65em;
@@ -343,7 +319,7 @@ body {
 }
 
 .badge-info {
-    color: #000000 !important;
+    color: #000000 !important; /* Texte noir forcé */
     background-color: #bc6c25;
     border: 2px solid #000000;
 }
@@ -354,9 +330,7 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 
-/* ========================================
-   TIMELINE
-   ======================================== */
+/* Timeline moderne */
 .timeline {
     position: relative;
     padding: 2rem 0;
@@ -418,9 +392,7 @@ body {
     left: -2rem;
 }
 
-/* ========================================
-   CONTACT
-   ======================================== */
+/* Contact moderne */
 .contact-card {
     background: var(--gradient);
     color: var(--background-light);
@@ -456,7 +428,7 @@ body {
     color: var(--background-light);
     margin: 0 0.5rem;
     font-size: 1.2rem;
-    transition: var(--transition-default);
+    transition: all 0.3s ease;
     text-decoration: none;
 }
 
@@ -466,9 +438,7 @@ body {
     transform: translateY(-5px);
 }
 
-/* ========================================
-   ANIMATIONS
-   ======================================== */
+/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -481,17 +451,31 @@ body {
 }
 
 @keyframes float {
-    0%, 100% { 
-        transform: rotate(0deg) translateX(0px); 
-    }
-    50% { 
-        transform: rotate(180deg) translateX(20px); 
-    }
+    0%, 100% { transform: rotate(0deg) translateX(0px); }
+    50% { transform: rotate(180deg) translateX(20px); }
 }
 
-/* ========================================
-   RESPONSIVE
-   ======================================== */
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .hero-subtitle { font-size: 1.2rem; }
+    .profile-image { width: 200px; height: 200px; }
+    .timeline::before { left: 20px; }
+    .timeline-item { width: 100%; left: 0 !important; padding-left: 3rem !important; padding-right: 1rem !important; }
+    .timeline-date { position: static !important; margin-bottom: 1rem; display: inline-block; }
+}
+
+/* Solution 1: Ajouter du padding-top au body pour compenser la navbar fixe */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    overflow-x: hidden;
+    /* Ajouter du padding-top pour compenser la navbar */
+    padding-top: 80px; /* Ajustez cette valeur selon la hauteur de votre navbar */
+}
+
+/* Améliorer l'affichage du menu déroulant sur mobile */
 @media (max-width: 991px) {
     .navbar-collapse {
         background: rgba(254, 250, 224, 0.98);
@@ -508,38 +492,23 @@ body {
     }
 }
 
+/* Solution 4: Ajuster le scroll pour les ancres */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Compenser pour la navbar fixe lors du scroll */
+}
+
+/* Améliorer l'espacement général sur mobile */
 @media (max-width: 768px) {
-    /* Ajustements généraux */
     .section {
-        padding: var(--padding-section-mobile);
-    }
-    
-    /* Hero responsive */
-    .hero h1 { 
-        font-size: 2.5rem; 
-    }
-    
-    .hero-subtitle { 
-        font-size: 1.2rem; 
+        padding: 3rem 0; /* Réduire le padding des sections */
     }
     
     .hero-content {
-        text-align: center;
+        text-align: center; /* Centrer le contenu sur mobile */
         padding: 1rem;
     }
     
-    /* Images responsive */
-    .profile-image { 
-        width: 200px; 
-        height: 200px; 
-    }
-    
-    #photo-profil {
-        width: 200px;
-        height: 250px;
-    }
-    
-    /* Boutons responsive */
     .cta-buttons {
         display: flex;
         flex-direction: column;
@@ -552,22 +521,17 @@ body {
         max-width: 250px;
         text-align: center;
     }
-    
-    /* Timeline responsive */
-    .timeline::before { 
-        left: 20px; 
-    }
-    
-    .timeline-item { 
-        width: 100%; 
-        left: 0 !important; 
-        padding-left: 3rem !important; 
-        padding-right: 1rem !important; 
-    }
-    
-    .timeline-date { 
-        position: static !important; 
-        margin-bottom: 1rem; 
-        display: inline-block; 
+}
+
+
+@media (max-width: 768px) {
+    #photo-profil {
+        width: 200px;
+        height: 250px; /* ou la taille que vous préférez */
+        object-fit: cover;
+        border-radius: 25px;
     }
 }
+
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
