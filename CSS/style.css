@@ -490,6 +490,17 @@ body {
     .timeline-item { width: 100%; left: 0 !important; padding-left: 3rem !important; padding-right: 1rem !important; }
     .timeline-date { position: static !important; margin-bottom: 1rem; display: inline-block; }
 }
+/* Solution 3: Améliorer la navbar pour mobile */
+.navbar {
+    background: rgba(254, 250, 224, 0.98) !important; /* Augmenter l'opacité */
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(96, 108, 56, 0.2);
+    padding: 0.5rem 0; /* Réduire le padding sur mobile */
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    /* Assurer que la navbar reste au-dessus */
+    z-index: 1030;
+}
 
 /* Améliorer l'affichage du menu déroulant sur mobile */
 @media (max-width: 768px) {
@@ -498,7 +509,7 @@ body {
         backdrop-filter: blur(15px);
         border-radius: 10px;
         margin-top: 10px;
-        padding: 2rem;
+        padding: 1rem;
         box-shadow: var(--shadow);
     }
     
