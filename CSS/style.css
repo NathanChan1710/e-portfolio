@@ -477,7 +477,7 @@ body {
 */
 
 /* Améliorer l'affichage du menu déroulant sur mobile */
-@media (max-width: 991px) {
+@media (max-width: 768px) {
     .navbar-collapse {
         background: rgba(254, 250, 224, 0.98);
         backdrop-filter: blur(15px);
