@@ -533,13 +533,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  #toggle-icon {
-    font-size: 0.5rem;
-    padding: 0.2rem;
-  }
-}
-
-@media (max-width: 768px) {
     #photo-profil {
         width: 200px;
         height: 250px; /* ou la taille que vous préférez */
