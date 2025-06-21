@@ -96,6 +96,7 @@ body {
     color: var(--background-light);
     position: relative;
     overflow: hidden;
+    padding-top: 50px;
 }
 
 .hero-subtitle {
