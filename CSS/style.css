@@ -466,14 +466,15 @@ body {
 }
 
 /* Solution 1: Ajouter du padding-top au body pour compenser la navbar fixe */
+/*
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--dark-color);
     overflow-x: hidden;
-    /* Ajouter du padding-top pour compenser la navbar */
-    padding-top: 80px; /* Ajustez cette valeur selon la hauteur de votre navbar */
+    padding-top: 80px;
 }
+*/
 
 /* Améliorer l'affichage du menu déroulant sur mobile */
 @media (max-width: 991px) {
