@@ -36,6 +36,32 @@ body {
     box-shadow: var(--shadow);
 }
 
+/* Cacher la checkbox */
+#dark-toggle {
+    display: none;
+  }
+  
+  /* Le label joue le rôle de bouton */
+  label[for="dark-toggle"] {
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /* Quand la checkbox est cochée, on change le thème */
+#dark-toggle:checked ~ * {
+    background-color: #121212;
+}
+  
+#dark-toggle:checked ~ label[for="dark-toggle"] {
+    background-color: #333;
+    color: #fff;
+}
+
 .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
