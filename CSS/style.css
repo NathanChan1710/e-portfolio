@@ -534,9 +534,8 @@ body {
 
 @media (max-width: 768px) {
   #toggle-icon {
-    font-size: 1.5rem;
-      width:50px;/* Taille plus petite sur mobile */
-    padding: 0.4rem;
+    font-size: 0.5rem;
+    padding: 0.2rem;
   }
 }
 
