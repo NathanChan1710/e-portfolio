@@ -491,13 +491,6 @@ body {
         margin: 0.25rem 0;
     }
 }
-
-/* Solution 4: Ajuster le scroll pour les ancres */
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* Compenser pour la navbar fixe lors du scroll */
-}
-
 /* Améliorer l'espacement général sur mobile */
 @media (max-width: 768px) {
     .section {
